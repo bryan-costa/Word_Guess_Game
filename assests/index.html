@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+
+<body class="bg" background="images/hockey-rinks.png">
+    <h1 id="header">The Hockey Game</h1>
+    <p>Guess the word below by selecting a letter on your keyboard in order to see if your shots are on goal or go wide.
+        Once you have guessed all of the letters in the word you will score a goal! If you cannot guess the word before
+        you run out of shots then the computer scores a goal. First to 3 goals wins!
+    </p>
+    <div class="container">
+        <div class="row1">
+            <div class="col">
+                <p id="ps">Player's Score</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col">
+                <p id="cs">Computer's Score</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col">
+                <p id="r2p">_ _ _ _ _ _ _</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="r3p">Shots Wide</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="r3p">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="bt" action="index.html">
+                    <input type="submit" value="Start New Game" />
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="./javascript/game.js"></script>
 </body>
+
 </html>
