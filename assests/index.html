@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Hockey Game</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg" background="images/hockey-rinks.png">
+<body>
     <h1 id="header">The Hockey Game</h1>
     <p>Guess the word below by selecting a letter on your keyboard in order to see if your shots are on goal or go wide.
         Once you have guessed all of the letters in the word you will score a goal! If you cannot guess the word before
-        you run out of shots then the computer scores a goal. First to 3 goals wins!
+        you run out of shots then the computer scores a goal. First to 3 goals wins! Press any key to get started!
     </p>
-    <div class="container">
+    <div class="container" class="bg" background="images/hockey-rinks.png">
         <div class="row1">
             <div class="col">
                 <p id="ps">Player's Score</p>
@@ -43,7 +43,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <p class="r3p">Shots Wide</p>
+                <p class="r3p">Shots Wide 0</p>
             </div>
             <div class="row">
                 <div class="col">
@@ -53,8 +53,8 @@
         </div>
         <div class="row">
             <div class="col">
-                <form id="bt" action="index.html">
-                    <input type="submit" value="Start New Game" />
+                <form action="index.html">
+                    <input id="bt" type="submit" value="Start New Game" />
                 </form>
             </div>
         </div>
