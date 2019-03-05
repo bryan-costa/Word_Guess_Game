@@ -4,30 +4,34 @@ const computerWords = ['hockey', 'breakaway', 'hat trick']
 
 let chosenNum = Math.floor(Math.random() * computerWords.length);
 let chosenWord = computerWords[chosenNum];
+let allowedGuesses = 13;
 let rightLetter = [];
 let wrongLetter = [];
 let underscore = [];
+// console.log(rightLetter);
 console.log(chosenWord);
 
+// Adds the underscores at the beginning of the game
 let underscorePerLetter = _ => {
     for (let i = 0; i < chosenWord.length; i++) {
-        underscore.push(`_`);
+        underscore.push(`_ `)
+        document.getElementById("r2p").innerHTML = underscore.join("")
+        // console.log(underscore)
     }
-    return underscore;
 }
 document.addEventListener("keypress", (event) => {
     let keyLetter = String.fromCharCode(event.keyCode);
-    if (chosenWord.indexOf(keyLetter) > -1) {
+    // Correct letter is pressed
+    if (chosenWord.indexOf(keyLetter) != -1) {
         rightLetter.push(keyLetter);
         underscore[chosenWord.indexOf(keyLetter)] = keyLetter;
-        if (underscore.join('') === chosenWord) {
-            alert('You win')
-        }
-        console.log(rightLetter);
-} else {
-        wrongLetter.push(wrongLetter)
+        document.getElementById("r2p").innerHTML = underscore.join("")
+    } else {
+        // Wrong letter is pressed
+        wrongLetter.push(keyLetter)
+        wrongLetter[chosenWord.indexOf(keyLetter)] = keyLetter;
+        document.getElementById("wl").innerHTML = wrongLetter.join("")
         console.log(wrongLetter)
     }
-})
-
-// 1:07:46 https://www.youtube.com/watch?v=f5BbzXgvi1o
+    })
+underscorePerLetter()
